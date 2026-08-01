@@ -9,6 +9,10 @@ interface ContactPayload {
 const MAX_BODY_BYTES = 12_000;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+declare const process: {
+  env: Record<string, string | undefined>;
+};
+
 const json = (body: Record<string, unknown>, status = 200) =>
   Response.json(body, {
     status,
@@ -20,7 +24,7 @@ const json = (body: Record<string, unknown>, status = 200) =>
 const cleanText = (value: unknown) =>
   typeof value === 'string' ? value.replace(/\r\n/g, '\n').trim() : '';
 
-export default async function handler(request: Request) {
+const handler = async (request: Request) => {
   if (request.method !== 'POST') {
     return new Response(null, {
       status: 405,
@@ -144,4 +148,8 @@ export default async function handler(request: Request) {
       502,
     );
   }
-}
+};
+
+export default {
+  fetch: handler,
+};
