@@ -4,6 +4,18 @@
   --font-sans: "Inter Variable", "Inter", "Aptos", "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono Variable", "JetBrains Mono", "SFMono-Regular", "Cascadia Code", monospace;
   --font-display: "Space Grotesk Variable", "Space Grotesk", "Aptos Display", "Segoe UI", sans-serif;
+
+  --color-canvas-dark: #120b24;
+  --color-surface-dark: #20133a;
+  --color-canvas-light: #f8f5fc;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-accent-soft: #ede9fe;
+  --color-accent-secondary: #ec4899;
+  --color-text-on-light: #1f1633;
+  --color-text-muted-on-light: #62566f;
+  --color-text-on-dark: #ffffff;
+  --color-text-muted-on-dark: #c4b5d4;
 }
 
 :root {
@@ -24,7 +36,7 @@ html {
   overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
-  background: #f4f4eb;
+  background: var(--color-canvas-light);
 }
 
 body {
@@ -32,7 +44,8 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: clip;
-  background: #f4f4eb;
+  color: var(--color-text-on-light);
+  background: var(--color-canvas-light);
 }
 
 body::before {
@@ -61,8 +74,8 @@ svg {
 }
 
 ::selection {
-  color: #050505;
-  background: #9ef01a;
+  color: var(--color-text-on-dark);
+  background: var(--color-accent);
 }
 
 ::-webkit-scrollbar {
@@ -70,17 +83,17 @@ svg {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4f4eb;
+  background: var(--color-canvas-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 3px solid #f4f4eb;
+  border: 3px solid var(--color-canvas-light);
   border-radius: 999px;
-  background: #171717;
+  background: var(--color-surface-dark);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ef01a;
+  background: var(--color-accent);
 }
 
 .font-display {
@@ -89,7 +102,7 @@ svg {
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: clamp(1px, 0.12vw, 2px) #080808;
+  -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--color-text-on-light);
 }
 
 @media (prefers-reduced-motion: reduce) {

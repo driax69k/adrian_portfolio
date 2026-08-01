@@ -63,10 +63,10 @@ export const SectionHeading = ({
         <p
           className={cn(
             'heading-reveal mb-5 inline-flex items-center gap-3 font-mono text-[0.65rem] font-black uppercase tracking-[0.2em]',
-            theme === 'dark' ? 'text-white/60' : 'text-black/55',
+            theme === 'dark' ? 'text-text-on-dark/60' : 'text-text-on-light/55',
           )}
         >
-          <span className="size-1.5 rounded-full bg-[#9ef01a] shadow-[0_0_14px_rgba(158,240,26,0.75)]" />
+          <span className="size-1.5 rounded-full bg-accent shadow-[0_0_14px_rgba(124,58,237,0.75)]" />
           {eyebrow}
         </p>
       </div>
@@ -74,7 +74,7 @@ export const SectionHeading = ({
         <h2
           className={cn(
             'heading-reveal font-display text-balance text-4xl font-black uppercase leading-[0.95] tracking-[-0.055em] sm:text-5xl lg:text-7xl',
-            theme === 'dark' ? 'text-white' : 'text-black',
+            theme === 'dark' ? 'text-text-on-dark' : 'text-text-on-light',
           )}
         >
           {title}
@@ -84,7 +84,7 @@ export const SectionHeading = ({
         <p
           className={cn(
             'heading-reveal mt-5 text-pretty text-base leading-7 sm:text-lg',
-            theme === 'dark' ? 'text-white/50' : 'text-black/55',
+            theme === 'dark' ? 'text-text-on-dark/50' : 'text-text-on-light/55',
           )}
         >
           {description}

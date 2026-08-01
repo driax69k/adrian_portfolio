@@ -13,14 +13,14 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 const styles = {
-  base: 'group relative inline-flex items-center justify-center gap-3 overflow-hidden border font-mono font-black uppercase tracking-[0.1em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ef01a] focus-visible:ring-offset-4 disabled:cursor-not-allowed disabled:opacity-50',
+  base: 'group relative inline-flex items-center justify-center gap-3 overflow-hidden border font-mono font-black uppercase tracking-[0.1em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 disabled:cursor-not-allowed disabled:opacity-50',
   variants: {
     primary:
-      'border-black bg-black text-white hover:border-[#9ef01a] hover:bg-[#9ef01a] hover:text-black',
+      'border-canvas-dark bg-canvas-dark text-text-on-dark hover:border-accent hover:bg-accent hover:text-text-on-dark',
     secondary:
-      'border-black bg-transparent text-black hover:bg-black hover:text-white',
+      'border-text-on-light bg-transparent text-text-on-light hover:bg-canvas-dark hover:text-text-on-dark',
     ghost:
-      'border-transparent bg-transparent text-black/60 hover:border-black/15 hover:text-black',
+      'border-transparent bg-transparent text-text-on-light/60 hover:border-text-on-light/15 hover:text-text-on-light',
   },
   sizes: {
     sm: 'min-h-10 px-4 text-[0.66rem]',

@@ -47,10 +47,10 @@ const App = () => {
   }, [isLoading]);
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#f4f4eb] text-black">
+    <div className="min-h-screen overflow-x-clip bg-canvas-light text-text-on-light">
       <a
         href="#main-content"
-        className="fixed left-4 top-3 z-[120] -translate-y-20 bg-[#9ef01a] px-4 py-2 font-mono text-xs font-black uppercase tracking-wider text-black transition focus:translate-y-0"
+        className="fixed left-4 top-3 z-[120] -translate-y-20 bg-accent px-4 py-2 font-mono text-xs font-black uppercase tracking-wider text-text-on-dark transition focus:translate-y-0"
       >
         Skip to content
       </a>

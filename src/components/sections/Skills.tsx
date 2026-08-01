@@ -202,13 +202,13 @@ export const Skills = () => {
     <section
       id="skills"
       ref={root}
-      className="relative scroll-mt-20 overflow-hidden border-y border-white/10 bg-[#080808] px-5 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-32"
+      className="relative scroll-mt-20 overflow-hidden border-y border-white/10 bg-canvas-dark px-5 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-32"
       aria-labelledby="skills-title"
     >
       <div className="mx-auto max-w-[90rem]">
         <div className="mb-16 flex items-center gap-3 sm:mb-20">
-          <span className="size-1.5 shrink-0 rounded-full bg-[#9ef01a] shadow-[0_0_14px_rgba(158,240,26,0.55)]" />
-          <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.28em] text-white/65 sm:text-[0.68rem]">
+          <span className="size-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_14px_rgba(124,58,237,0.55)]" />
+          <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.28em] text-text-muted-on-dark sm:text-[0.68rem]">
             02 — Tech Stack
           </span>
           <span className="h-px flex-1 bg-white/10" />
@@ -218,12 +218,12 @@ export const Skills = () => {
           <div className="skills-intro lg:sticky lg:top-28 lg:self-start">
           <h2
             id="skills-title"
-            className="font-display text-[clamp(3.4rem,5.8vw,5.9rem)] font-black uppercase leading-[0.85] tracking-[-0.065em] text-white"
+            className="font-display text-[clamp(3.4rem,5.8vw,5.9rem)] font-black uppercase leading-[0.85] tracking-[-0.065em] text-text-on-dark"
           >
             <span className="block">Tech</span>
-            <span className="block text-[#9ef01a]">Stack.</span>
+            <span className="block text-accent">Stack.</span>
           </h2>
-          <p className="mt-10 max-w-sm text-sm leading-8 text-white/50 sm:text-base">
+          <p className="mt-10 max-w-sm text-sm leading-8 text-text-muted-on-dark sm:text-base">
             A growing collection of tools, frameworks, and technologies I use
             to design, build, and ship dependable digital products.
           </p>
@@ -237,10 +237,10 @@ export const Skills = () => {
                   className="skill-group grid gap-8 border-b border-white/10 py-10 sm:grid-cols-[minmax(11rem,0.75fr)_minmax(0,1.25fr)] sm:py-12 lg:gap-10 xl:grid-cols-[minmax(13rem,0.72fr)_minmax(0,1.28fr)] xl:py-14"
                 >
                 <div>
-                  <h3 className="font-display text-xl font-black uppercase leading-tight tracking-[-0.035em] text-white sm:text-2xl">
+                  <h3 className="font-display text-xl font-black uppercase leading-tight tracking-[-0.035em] text-text-on-dark sm:text-2xl">
                     {category.name}
                   </h3>
-                  <p className="mt-3 max-w-[18rem] font-mono text-[0.625rem] font-medium uppercase leading-[1.7] tracking-[0.18em] text-white/40">
+                  <p className="mt-3 max-w-[18rem] font-mono text-[0.625rem] font-medium uppercase leading-[1.7] tracking-[0.18em] text-text-muted-on-dark">
                     <span aria-hidden="true">// </span>
                     {category.description}
                   </p>
@@ -252,7 +252,7 @@ export const Skills = () => {
                     return (
                       <span
                         key={skill.name}
-                        className="skill-chip group/skill relative grid size-12 shrink-0 place-items-center rounded-lg border border-white/10 bg-black text-white transition duration-300 hover:-translate-y-1 hover:border-[#9ef01a]/60 hover:bg-white/[0.035] focus-visible:-translate-y-1 focus-visible:border-[#9ef01a]/60 focus-visible:outline-none"
+                        className="skill-chip group/skill relative grid size-12 shrink-0 place-items-center rounded-lg border border-white/10 bg-surface-dark text-text-on-dark transition duration-300 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[0.035] focus-visible:-translate-y-1 focus-visible:border-accent/60 focus-visible:outline-none"
                         role="img"
                         aria-label={skill.name}
                         tabIndex={0}
@@ -263,7 +263,7 @@ export const Skills = () => {
                           aria-hidden="true"
                         />
                         <span
-                          className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-md border border-white/15 bg-[#151515] px-2.5 py-1.5 font-mono text-[0.625rem] font-bold uppercase tracking-[0.12em] text-white opacity-0 shadow-xl transition duration-200 group-hover/skill:translate-y-0 group-hover/skill:opacity-100 group-focus-visible/skill:translate-y-0 group-focus-visible/skill:opacity-100"
+                          className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-md border border-white/15 bg-surface-dark px-2.5 py-1.5 font-mono text-[0.625rem] font-bold uppercase tracking-[0.12em] text-text-on-dark opacity-0 shadow-xl transition duration-200 group-hover/skill:translate-y-0 group-hover/skill:opacity-100 group-focus-visible/skill:translate-y-0 group-focus-visible/skill:opacity-100"
                           aria-hidden="true"
                         >
                           {skill.name}

@@ -1,184 +1,165 @@
 # Portfolio Color Palette Guide
 
-## Recommended Direction: Electric Lime Editorial
+## Best Direction: Electric Lime Editorial
 
-The best palette for this portfolio is a focused combination of near-black,
-warm off-white, and electric lime. It already matches the website's bold
-typography, technical personality, and modern portfolio style.
+The strongest palette for this portfolio is **warm off-white, near-black, and
+electric lime**. It matches the site's bold type, technical mono labels, sharp
+UI, and developer-focused personality while remaining memorable without
+feeling overly colorful.
 
-The goal is not to add more colors. The goal is to use fewer colors more
-consistently so every section feels like part of the same website.
+The visual identity should come from contrast and disciplined lime accents,
+not from adding more brand colors.
 
 ## Core Palette
 
-| Role | Color | Hex | Recommended use |
+| Role | Name | Hex | Use |
 | --- | --- | --- | --- |
-| Primary background | Ink Black | `#080808` | Hero, skills, contact, footer, project windows |
-| Raised dark surface | Graphite | `#121212` | Cards and panels placed on Ink Black |
-| Primary light background | Warm Paper | `#F4F4EB` | About, journey, and text-heavy sections |
-| Brand accent | Electric Lime | `#9EF01A` | Main buttons, active states, icons, timeline markers |
-| Accent hover | Deep Lime | `#72C600` | Hover and pressed states on light backgrounds |
-| Accent surface | Lime Mist | `#DFF6B2` | Featured sections and soft highlighted panels |
-| Main dark text | Ink Black | `#080808` | Text displayed on light backgrounds |
-| Muted dark text | Olive Gray | `#5B5D55` | Supporting text on Warm Paper |
-| Main light text | White | `#FFFFFF` | Headings displayed on dark backgrounds |
-| Muted light text | Silver | `#A3A39B` | Supporting text on dark backgrounds |
+| Light canvas | Warm Paper | `#F4F4EB` | Hero, About, Experience, modal backgrounds |
+| Dark canvas | Ink Black | `#080808` | Skills, Contact, loading screen, footer |
+| Raised dark surface | Graphite | `#121212` | Projects section, cards, panels |
+| Primary accent | Electric Lime | `#9EF01A` | CTAs, active states, markers, small highlights |
+| Accent hover | Deep Lime | `#72C600` | Hover/pressed fills on light backgrounds |
+| Accent surface | Lime Mist | `#DFF6B2` | Featured section or quiet highlighted panel |
+| Text on light | Ink Black | `#080808` | Headings and primary body text |
+| Muted text on light | Olive Gray | `#5B5D55` | Supporting copy and metadata |
+| Text on dark | White | `#FFFFFF` | Headings and primary copy |
+| Muted text on dark | Silver | `#A3A39B` | Supporting copy and metadata |
 
-## Why This Palette Works
+## Recommended Balance
 
-- Electric lime gives the portfolio a memorable visual identity.
-- Warm Paper is easier on the eyes than pure white and complements the lime.
-- Near-black creates strong contrast without looking as harsh as pure black.
-- The palette works well with the existing large headings and technical mono
-  labels.
-- The colors support both creative UI/UX work and software-development work.
+Use the palette at roughly **60 / 30 / 10**:
 
-## Recommended Color Balance
+- **60% canvas:** Warm Paper or Ink Black.
+- **30% surfaces:** Graphite, Lime Mist, or subtle neutral overlays.
+- **10% accent:** Electric Lime and Deep Lime.
 
-Use an approximate `60 / 30 / 10` balance:
+Electric Lime is most memorable when it is scarce. Use it to direct attention,
+not for long paragraphs or every card.
 
-- **60% neutral backgrounds:** Ink Black or Warm Paper.
-- **30% supporting surfaces:** Graphite, white overlays, or Lime Mist.
-- **10% Electric Lime:** buttons, markers, hover states, and important labels.
+## Section Recipe
 
-Electric Lime is most effective when it is limited. Avoid using it for long
-paragraphs or large background areas unless the text placed on it is black.
+This mapping follows the portfolio's current light-to-dark rhythm.
 
-## Accessible Text Pairings
-
-| Text | Background | Contrast | Recommended |
-| --- | --- | ---: | --- |
-| `#080808` | `#F4F4EB` | 18.11:1 | Excellent |
-| `#080808` | `#9EF01A` | 14.24:1 | Excellent for buttons |
-| `#121212` | `#DFF6B2` | 16.02:1 | Excellent |
-| `#5B5D55` | `#F4F4EB` | 6.04:1 | Good for body text |
-| `#FFFFFF` | `#121212` | 18.73:1 | Excellent |
-| `#A3A39B` | `#080808` | 7.89:1 | Good for supporting text |
-| `#72C600` | `#FFFFFF` | 2.14:1 | Avoid for small text |
-
-Use black text on lime buttons. Deep Lime should be used as a border,
-decoration, or hover background rather than small text on white.
-
-## Section Color Recipe
-
-| Section | Background | Main text | Accent |
+| Section | Background | Primary text | Accent |
 | --- | --- | --- | --- |
-| Hero | `#080808` | `#FFFFFF` | `#9EF01A` |
+| Navbar | Translucent Warm Paper / Ink Black | `#080808` / `#FFFFFF` | `#9EF01A` |
+| Hero | `#F4F4EB` | `#080808` | `#9EF01A` |
+| Marquee | `#080808` and `#9EF01A` bands | `#FFFFFF` / `#080808` | `#9EF01A` |
 | About | `#F4F4EB` | `#080808` | `#9EF01A` |
 | Skills | `#080808` | `#FFFFFF` | `#9EF01A` |
-| Projects | `#F4F4EB` | `#080808` | `#9EF01A` |
-| Journey | `#F4F4EB` | `#080808` | `#9EF01A` |
+| Projects | `#121212` | `#FFFFFF` | `#9EF01A` |
+| Experience | `#F4F4EB` | `#080808` | `#9EF01A` |
 | School Organizations | `#DFF6B2` | `#080808` | `#9EF01A` |
 | Contact | `#080808` | `#FFFFFF` | `#9EF01A` |
-| Footer | `#050505` | `#FFFFFF` | `#9EF01A` |
+| Footer | `#080808` | `#FFFFFF` | `#9EF01A` |
+
+Alternating light and dark sections gives the long page a clear reading rhythm.
+Avoid placing several full lime sections next to one another.
+
+## Accessible Pairings
+
+| Foreground | Background | Contrast | Guidance |
+| --- | --- | ---: | --- |
+| `#080808` | `#F4F4EB` | 18.11:1 | Excellent for all text |
+| `#080808` | `#9EF01A` | 14.24:1 | Excellent for buttons and badges |
+| `#080808` | `#72C600` | 9.34:1 | Excellent for hover/pressed buttons |
+| `#080808` | `#DFF6B2` | 17.13:1 | Excellent for featured sections |
+| `#FFFFFF` | `#121212` | 18.73:1 | Excellent for all text |
+| `#A3A39B` | `#080808` | 7.89:1 | Good for supporting text |
+| `#5B5D55` | `#F4F4EB` | 6.04:1 | Good for body text |
+| `#72C600` | `#FFFFFF` | 2.14:1 | Do not use for text |
+
+Always use Ink Black text on lime fills. Deep Lime is a fill, border, or
+decorative color—not small text on a light background.
 
 ## Component Rules
 
 ### Buttons
 
-- Primary: Lime background, black text, black or lime border.
-- Primary hover: Deep Lime background, black text.
-- Secondary dark: Transparent background, white border, white text.
-- Secondary light: Transparent background, black border, black text.
-- Always include a visible keyboard focus ring.
+- Primary: Electric Lime fill with Ink Black text.
+- Primary hover: Deep Lime fill with Ink Black text.
+- Secondary on light: transparent with an Ink Black border and text.
+- Secondary on dark: transparent with a white border and text.
+- Keyboard focus: a visible Electric Lime ring, with enough offset to separate
+  it from the component.
 
 ### Cards
 
-- On dark sections: use `#121212` with a subtle white border.
-- On light sections: use a white overlay or Warm Paper with a subtle black
+- On dark canvas: Graphite or a very subtle white overlay with a 10–15% white
   border.
-- Use lime for one small detail such as an icon, badge, or top border.
-- Avoid giving every card a strong lime background.
+- On light canvas: Warm Paper or a subtle white overlay with a 10–15% black
+  border.
+- Limit lime to one strong detail per card: an icon, status dot, top rule, or
+  hover state.
+- Keep shadows neutral; reserve lime glow for active interactive elements.
 
-### Typography
+### Type
 
-- Headings on dark backgrounds: White.
-- Paragraphs on dark backgrounds: Silver or white with reduced opacity.
-- Headings on light backgrounds: Ink Black.
-- Paragraphs on light backgrounds: Olive Gray.
-- Mono labels: Electric Lime on dark sections and Ink Black on lime sections.
+- Use Ink Black headings and Olive Gray supporting copy on Warm Paper.
+- Use white headings and Silver supporting copy on Ink Black or Graphite.
+- Use Electric Lime for short mono labels on dark sections.
+- Never set paragraphs in lime.
 
-### Borders and Shadows
+## CSS Tokens
 
-- Dark border: black at 10% to 20% opacity.
-- Light border: white at 10% to 15% opacity.
-- Keep shadows neutral rather than green.
-- Use a lime glow only for important interactive states.
-
-## Suggested CSS Tokens
-
-Add these variables to the global stylesheet when the site is ready to be
-standardized:
+Use semantic tokens so the palette can be adjusted without searching through
+every component.
 
 ```css
 :root {
-  --color-ink: #080808;
-  --color-graphite: #121212;
-  --color-paper: #f4f4eb;
-  --color-lime: #9ef01a;
-  --color-lime-hover: #72c600;
-  --color-lime-mist: #dff6b2;
-  --color-text-dark-muted: #5b5d55;
-  --color-text-light: #ffffff;
-  --color-text-light-muted: #a3a39b;
+  --color-canvas-light: #f4f4eb;
+  --color-canvas-dark: #080808;
+  --color-surface-dark: #121212;
+
+  --color-accent: #9ef01a;
+  --color-accent-hover: #72c600;
+  --color-accent-soft: #dff6b2;
+
+  --color-text-on-light: #080808;
+  --color-text-muted-on-light: #5b5d55;
+  --color-text-on-dark: #ffffff;
+  --color-text-muted-on-dark: #a3a39b;
 }
 ```
 
-Example usage:
+Example:
 
 ```css
 .primary-button {
-  background: var(--color-lime);
-  color: var(--color-ink);
+  color: var(--color-text-on-light);
+  background: var(--color-accent);
 }
 
 .primary-button:hover {
-  background: var(--color-lime-hover);
+  background: var(--color-accent-hover);
 }
 ```
 
 ## Colors to Consolidate
 
-The current project contains several colors that are visually very similar.
-Reducing them to the core tokens will make future editing easier.
+The current source contains several nearly identical shades. Standardizing
+them will make the design feel more intentional and simplify maintenance.
 
-- Replace most `#050505`, `#090909`, `#0B0B0B`, `#101010`, `#151515`, and
-  `#171717` surfaces with either Ink Black or Graphite.
-- Replace most `#F7F7EF` backgrounds with Warm Paper.
-- Replace most `#78C800`, `#9ACB48`, and `#B7F34B` accents with Electric Lime
-  or Deep Lime.
-- Keep blue, yellow, purple, and orange only when they identify a specific
-  technology or category.
+| Current colors | Consolidate to |
+| --- | --- |
+| `#050505`, `#090909`, `#0B0B0B` | `#080808` for canvas or `#121212` for raised surfaces |
+| `#101010`, `#151515`, `#171717` | `#121212` |
+| `#F7F7EF` | `#F4F4EB` |
+| `#9ACB48`, `#B7F34B` | `#9EF01A` or an opacity of it |
+| `#78C800` | `#72C600` |
+| `#D9F2A1` | `#DFF6B2` |
 
-## Optional Alternative Palettes
+Technology logo colors can remain authentic because they identify a tool, not
+the portfolio brand.
 
-If the brand direction changes later, replace the lime family with only one of
-these accent families. Do not combine all of them.
-
-### Midnight Cyan
-
-- Accent: `#22D3EE`
-- Hover: `#0891B2`
-- Soft surface: `#CFFAFE`
-- Mood: polished, technical, and futuristic.
-
-### Graphite Amber
-
-- Accent: `#FBBF24`
-- Hover: `#D97706`
-- Soft surface: `#FEF3C7`
-- Mood: warm, confident, and editorial.
-
-### Digital Violet
-
-- Accent: `#A78BFA`
-- Hover: `#7C3AED`
-- Soft surface: `#EDE9FE`
-- Mood: creative, experimental, and AI-focused.
+The current Open Graph image uses cyan and navy, while the live interface uses
+lime and near-black. Recoloring the Open Graph image and any remaining
+placeholder artwork to this palette would make shared links feel consistent
+with the site.
 
 ## Final Recommendation
 
-Keep Electric Lime as the main brand accent. It is already the most memorable
-part of the website and works well with the current visual style. Standardize
-the neutral colors, reserve lime for meaningful emphasis, and use the
-alternative colors only for technology icons or project categories.
+Keep **Electric Lime Editorial** as the single brand system. It is already the
+site's most distinctive visual cue. The biggest improvement will come from
+standardizing neutral shades and using lime more selectively—not from choosing
+a different accent color.

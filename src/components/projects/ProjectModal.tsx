@@ -37,7 +37,7 @@ const getProjectContactHref = (projectTitle: string) => {
 };
 
 const DetailLabel = ({ children }: { children: string }) => (
-  <span className="bg-black/[0.055] px-3 py-1.5 font-mono text-[0.625rem] font-black uppercase tracking-[0.14em] text-black/70 sm:text-xs">
+  <span className="bg-text-on-light/[0.055] px-3 py-1.5 font-mono text-[0.625rem] font-black uppercase tracking-[0.14em] text-text-muted-on-light sm:text-xs">
     {children}
   </span>
 );
@@ -148,7 +148,7 @@ export const ProjectModal = ({
   return createPortal(
     <div
       ref={root}
-      className="project-modal-backdrop fixed inset-0 z-[200] flex items-center justify-center bg-black/75 p-2 backdrop-blur-sm sm:p-5 lg:p-8"
+      className="project-modal-backdrop fixed inset-0 z-[200] flex items-center justify-center bg-canvas-dark/80 p-2 backdrop-blur-sm sm:p-5 lg:p-8"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}
@@ -159,16 +159,16 @@ export const ProjectModal = ({
         aria-modal="true"
         aria-labelledby="project-modal-title"
         aria-describedby="project-modal-description"
-        className="project-modal-window relative flex h-[min(94dvh,58rem)] w-full max-w-6xl flex-col overflow-hidden rounded-sm border border-white/20 bg-[#f4f4eb] text-black shadow-[0_30px_100px_rgba(0,0,0,0.55)]"
+        className="project-modal-window relative flex h-[min(94dvh,58rem)] w-full max-w-6xl flex-col overflow-hidden rounded-sm border border-white/20 bg-canvas-light text-text-on-light shadow-[0_30px_100px_rgba(18,11,36,0.6)]"
         onKeyDown={trapFocus}
       >
-        <div className="h-1 shrink-0 bg-[#9ef01a]" />
-        <header className="z-20 flex shrink-0 items-center justify-between gap-3 border-b border-black/10 bg-[#f4f4eb]/95 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-4">
+        <div className="h-1 shrink-0 bg-accent" />
+        <header className="z-20 flex shrink-0 items-center justify-between gap-3 border-b border-text-on-light/10 bg-canvas-light/95 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-3">
-            <span className="truncate font-mono text-[0.58rem] font-black uppercase tracking-[0.13em] text-black/45 sm:text-xs sm:tracking-[0.18em]">
+            <span className="truncate font-mono text-[0.58rem] font-black uppercase tracking-[0.13em] text-text-muted-on-light sm:text-xs sm:tracking-[0.18em]">
               {categoryLabel}
             </span>
-            <span className="border-l border-black/20 pl-3 font-mono text-[0.58rem] font-black uppercase tracking-[0.13em] text-black/35 sm:text-xs sm:tracking-[0.18em]">
+            <span className="border-l border-text-on-light/20 pl-3 font-mono text-[0.58rem] font-black uppercase tracking-[0.13em] text-text-muted-on-light sm:text-xs sm:tracking-[0.18em]">
               {project.year}
             </span>
           </div>
@@ -177,7 +177,7 @@ export const ProjectModal = ({
             ref={closeButton}
             type="button"
             onClick={onClose}
-            className="group inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-black/10 bg-white px-4 font-mono text-[0.58rem] font-black uppercase tracking-[0.09em] shadow-sm transition hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ef01a] sm:px-5 sm:text-xs"
+            className="group inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-text-on-light/10 bg-white px-4 font-mono text-[0.58rem] font-black uppercase tracking-[0.09em] shadow-sm transition hover:bg-canvas-dark hover:text-text-on-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:px-5 sm:text-xs"
           >
             <ArrowLeft
               className="size-4 transition-transform group-hover:-translate-x-0.5"
@@ -191,19 +191,19 @@ export const ProjectModal = ({
 
         <div ref={scrollArea} className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <section className="mx-auto flex max-w-5xl flex-col items-center px-5 pb-10 pt-12 text-center sm:px-8 sm:pb-12 sm:pt-16 lg:px-10">
-            <p className="mb-5 font-mono text-[0.625rem] font-black uppercase tracking-[0.24em] text-black/40 sm:text-xs">
+            <p className="mb-5 font-mono text-[0.625rem] font-black uppercase tracking-[0.24em] text-text-muted-on-light sm:text-xs">
               Project case study
             </p>
             <h1
               id="project-modal-title"
-              className="font-display text-[clamp(3rem,8vw,7rem)] font-black uppercase leading-[0.85] tracking-[-0.065em] text-black"
+              className="font-display text-[clamp(3rem,8vw,7rem)] font-black uppercase leading-[0.85] tracking-[-0.065em] text-text-on-light"
             >
               {solidTitle ? `${solidTitle} ` : null}
               <span className="text-outline">{outlinedWord}</span>
             </h1>
             <p
               id="project-modal-description"
-              className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-black/55 sm:text-lg sm:leading-8"
+              className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-text-muted-on-light sm:text-lg sm:leading-8"
             >
               {project.description}
             </p>
@@ -213,7 +213,7 @@ export const ProjectModal = ({
                 href={primaryUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex min-h-12 items-center gap-2 bg-[#9ef01a] px-6 font-mono text-[0.65rem] font-black uppercase tracking-[0.12em] text-black transition hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4 sm:px-8"
+                className="group inline-flex min-h-12 items-center gap-2 bg-accent px-6 font-mono text-[0.65rem] font-black uppercase tracking-[0.12em] text-text-on-dark transition hover:bg-accent-hover hover:text-text-on-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 sm:px-8"
               >
                 {hasLiveUrl ? (
                   <Link2 className="size-4" aria-hidden="true" />
@@ -232,7 +232,7 @@ export const ProjectModal = ({
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-12 items-center gap-2 border border-black/15 bg-black/[0.035] px-6 font-mono text-[0.65rem] font-black uppercase tracking-[0.12em] text-black/70 transition hover:border-black hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4 sm:px-8"
+                  className="inline-flex min-h-12 items-center gap-2 border border-text-on-light/15 bg-text-on-light/[0.035] px-6 font-mono text-[0.65rem] font-black uppercase tracking-[0.12em] text-text-muted-on-light transition hover:border-canvas-dark hover:bg-canvas-dark hover:text-text-on-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 sm:px-8"
                 >
                   <FaGithub className="size-4" aria-hidden="true" />
                   Repository
@@ -242,28 +242,28 @@ export const ProjectModal = ({
           </section>
 
           <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:px-10">
-            <div className="mx-auto max-w-5xl border border-black/10 bg-white p-2 shadow-[0_18px_60px_rgba(0,0,0,0.06)] sm:p-3">
-              <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-black/[0.07] bg-[#101010] px-5 py-8 text-center text-white">
+            <div className="mx-auto max-w-5xl border border-text-on-light/10 bg-white p-2 shadow-[0_18px_60px_rgba(18,11,36,0.08)] sm:p-3">
+              <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-text-on-light/[0.07] bg-surface-dark px-5 py-8 text-center text-text-on-dark">
                 <div
                   className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:36px_36px]"
                   aria-hidden="true"
                 />
                 <div
-                  className="absolute left-1/2 top-1/2 size-[min(60vw,28rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#9ef01a]/20 bg-[#9ef01a]/[0.045]"
+                  className="absolute left-1/2 top-1/2 size-[min(60vw,28rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/20 bg-accent/[0.055]"
                   aria-hidden="true"
                 />
 
                 <div className="relative z-10 flex max-w-xl flex-col items-center">
-                  <span className="grid size-11 place-items-center rounded-full border border-[#9ef01a]/35 bg-[#9ef01a]/10 text-[#9ef01a] sm:size-14">
+                  <span className="grid size-11 place-items-center rounded-full border border-accent/35 bg-accent/10 text-accent sm:size-14">
                     <Link2 className="size-5 sm:size-6" aria-hidden="true" />
                   </span>
-                  <p className="mt-4 font-mono text-[0.56rem] font-black uppercase tracking-[0.18em] text-[#9ef01a] sm:mt-5 sm:text-xs">
+                  <p className="mt-4 font-mono text-[0.56rem] font-black uppercase tracking-[0.18em] text-accent-soft sm:mt-5 sm:text-xs">
                     Interactive project access
                   </p>
                   <h2 className="font-display mt-2 text-xl font-black uppercase tracking-[-0.04em] sm:mt-3 sm:text-4xl">
                     Experience {project.title}
                   </h2>
-                  <p className="mt-2 hidden max-w-lg text-sm leading-6 text-white/50 sm:block sm:text-base sm:leading-7">
+                  <p className="mt-2 hidden max-w-lg text-sm leading-6 text-text-muted-on-dark sm:block sm:text-base sm:leading-7">
                     No public preview is included here. Contact the developer
                     for a live interactive link tailored to this project.
                   </p>
@@ -271,7 +271,7 @@ export const ProjectModal = ({
                     href={contactHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 inline-flex min-h-10 items-center gap-2 border border-white/15 bg-white/[0.05] px-4 font-mono text-[0.58rem] font-black uppercase tracking-[0.1em] text-white/75 transition hover:border-[#9ef01a] hover:text-[#9ef01a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ef01a] sm:mt-6 sm:min-h-11 sm:px-5 sm:text-[0.62rem] sm:tracking-[0.12em]"
+                    className="mt-4 inline-flex min-h-10 items-center gap-2 border border-white/15 bg-white/[0.05] px-4 font-mono text-[0.58rem] font-black uppercase tracking-[0.1em] text-text-muted-on-dark transition hover:border-accent hover:text-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:mt-6 sm:min-h-11 sm:px-5 sm:text-[0.62rem] sm:tracking-[0.12em]"
                   >
                     Contact developer
                     <ArrowUpRight className="size-4" aria-hidden="true" />
@@ -282,16 +282,16 @@ export const ProjectModal = ({
           </section>
 
           <section className="mx-auto max-w-5xl px-5 pb-20 sm:px-8 lg:px-10">
-            <div className="grid gap-12 border-t border-black/10 pt-12 md:grid-cols-2 lg:gap-20 lg:pt-14">
+            <div className="grid gap-12 border-t border-text-on-light/10 pt-12 md:grid-cols-2 lg:gap-20 lg:pt-14">
               <div>
-                <h2 className="mb-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-[0.16em] text-black/40">
-                  <span className="h-px w-6 bg-black/20" />
+                <h2 className="mb-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-[0.16em] text-text-muted-on-light">
+                  <span className="h-px w-6 bg-text-on-light/20" />
                   Key features
                 </h2>
-                <ul className="space-y-4 text-sm leading-7 text-black/70 sm:text-base">
+                <ul className="space-y-4 text-sm leading-7 text-text-muted-on-light sm:text-base">
                   {project.features.map((feature) => (
                     <li key={feature} className="flex gap-4">
-                      <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-[#78c800]" />
+                      <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-accent" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -299,14 +299,14 @@ export const ProjectModal = ({
               </div>
 
               <div>
-                <h2 className="mb-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-[0.16em] text-black/40">
-                  <span className="h-px w-6 bg-black/20" />
+                <h2 className="mb-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-[0.16em] text-text-muted-on-light">
+                  <span className="h-px w-6 bg-text-on-light/20" />
                   Outcome &amp; impact
                 </h2>
-                <ul className="space-y-4 text-sm leading-7 text-black/70 sm:text-base">
+                <ul className="space-y-4 text-sm leading-7 text-text-muted-on-light sm:text-base">
                   {project.impact.map((outcome) => (
                     <li key={outcome} className="flex gap-4">
-                      <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-[#78c800]" />
+                      <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-accent" />
                       <span>{outcome}</span>
                     </li>
                   ))}
@@ -314,9 +314,9 @@ export const ProjectModal = ({
               </div>
             </div>
 
-            <div className="mt-12 border-t border-black/10 pt-10 lg:mt-14 lg:pt-12">
-              <h2 className="mb-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-[0.16em] text-black/40">
-                <span className="h-px w-6 bg-black/20" />
+            <div className="mt-12 border-t border-text-on-light/10 pt-10 lg:mt-14 lg:pt-12">
+              <h2 className="mb-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-[0.16em] text-text-muted-on-light">
+                <span className="h-px w-6 bg-text-on-light/20" />
                 Technology stack
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -327,12 +327,12 @@ export const ProjectModal = ({
             </div>
           </section>
 
-          <section className="bg-[#0b0b0b] px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10">
+          <section className="bg-canvas-dark px-5 py-8 text-text-on-dark sm:px-8 sm:py-10 lg:px-10">
             <div className="mx-auto grid max-w-5xl gap-3 sm:grid-cols-2">
               <button
                 type="button"
                 onClick={onPrevious}
-                className="group flex min-h-24 items-center gap-4 border border-white/15 px-5 text-left transition hover:border-[#9ef01a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ef01a]"
+                className="group flex min-h-24 items-center gap-4 border border-white/15 px-5 text-left transition hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label={`Show previous project: ${previousProject.title}`}
               >
                 <ArrowLeft
@@ -340,7 +340,7 @@ export const ProjectModal = ({
                   aria-hidden="true"
                 />
                 <span>
-                  <span className="font-mono text-[0.58rem] font-black uppercase tracking-[0.16em] text-[#9ef01a]">
+                  <span className="font-mono text-[0.58rem] font-black uppercase tracking-[0.16em] text-accent-soft">
                     Previous project
                   </span>
                   <span className="font-display mt-1 block text-xl font-black uppercase leading-none tracking-[-0.04em] sm:text-2xl">
@@ -352,11 +352,11 @@ export const ProjectModal = ({
               <button
                 type="button"
                 onClick={onNext}
-                className="group flex min-h-24 items-center justify-between gap-4 border border-white/15 px-5 text-left transition hover:border-[#9ef01a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ef01a]"
+                className="group flex min-h-24 items-center justify-between gap-4 border border-white/15 px-5 text-left transition hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label={`Show next project: ${nextProject.title}`}
               >
                 <span>
-                  <span className="font-mono text-[0.58rem] font-black uppercase tracking-[0.16em] text-[#9ef01a]">
+                  <span className="font-mono text-[0.58rem] font-black uppercase tracking-[0.16em] text-accent-soft">
                     Next project
                   </span>
                   <span className="font-display mt-1 block text-xl font-black uppercase leading-none tracking-[-0.04em] sm:text-2xl">

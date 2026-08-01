@@ -14,7 +14,7 @@ interface FieldShellProps {
 
 const FieldShell = ({ id, label, error, children }: FieldShellProps) => (
   <div>
-    <label htmlFor={id} className="mb-2 block font-mono text-[0.64rem] font-bold uppercase tracking-[0.12em] text-white/55">
+    <label htmlFor={id} className="mb-2 block font-mono text-[0.64rem] font-bold uppercase tracking-[0.12em] text-text-on-dark/55">
       {label}
     </label>
     {children}
@@ -44,10 +44,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           aria-invalid={Boolean(error)}
           aria-describedby={error ? `${fieldId}-error` : undefined}
           className={cn(
-            'min-h-12 w-full border bg-black px-4 text-[0.95rem] text-white outline-none transition placeholder:text-white/45',
+            'min-h-12 w-full border bg-canvas-dark px-4 text-[0.95rem] text-text-on-dark outline-none transition placeholder:text-text-on-dark/45',
             error
               ? 'border-rose-400/70 focus:border-rose-300 focus:ring-4 focus:ring-rose-400/10'
-              : 'border-white/15 hover:border-white/30 focus:border-[#9ef01a] focus:ring-4 focus:ring-[#9ef01a]/10',
+              : 'border-white/15 hover:border-white/30 focus:border-accent focus:ring-4 focus:ring-accent/10',
             className,
           )}
           {...props}
@@ -75,10 +75,10 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           aria-invalid={Boolean(error)}
           aria-describedby={error ? `${fieldId}-error` : undefined}
           className={cn(
-            'min-h-36 w-full resize-y border bg-black px-4 py-3 text-[0.95rem] text-white outline-none transition placeholder:text-white/45',
+            'min-h-36 w-full resize-y border bg-canvas-dark px-4 py-3 text-[0.95rem] text-text-on-dark outline-none transition placeholder:text-text-on-dark/45',
             error
               ? 'border-rose-400/70 focus:border-rose-300 focus:ring-4 focus:ring-rose-400/10'
-              : 'border-white/15 hover:border-white/30 focus:border-[#9ef01a] focus:ring-4 focus:ring-[#9ef01a]/10',
+              : 'border-white/15 hover:border-white/30 focus:border-accent focus:ring-4 focus:ring-accent/10',
             className,
           )}
           {...props}

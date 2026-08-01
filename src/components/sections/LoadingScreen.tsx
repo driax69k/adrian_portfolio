@@ -87,7 +87,7 @@ export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
   return (
     <div
       ref={root}
-      className="fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-[#080808]"
+      className="fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-canvas-dark"
       role="status"
       aria-live="polite"
       aria-label="Loading portfolio"
@@ -95,20 +95,20 @@ export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:44px_44px]" />
       <div className="loader-content relative w-[min(82vw,25rem)]">
         <div className="mb-10 flex items-end justify-between">
-          <div className="loader-mark grid size-20 place-items-center border border-[#9ef01a]/40 bg-[#9ef01a] font-mono text-3xl font-black tracking-[-0.08em] text-black shadow-[0_0_60px_rgba(158,240,26,0.18)]">
+          <div className="loader-mark grid size-20 place-items-center border border-accent/40 bg-accent font-mono text-3xl font-black tracking-[-0.08em] text-text-on-dark shadow-[0_0_60px_rgba(124,58,237,0.22)]">
             AC
           </div>
           <span
             ref={percent}
-            className="font-mono text-xs tracking-[0.16em] text-white/40"
+            className="font-mono text-xs tracking-[0.16em] text-text-muted-on-dark"
           >
             000%
           </span>
         </div>
         <div className="h-px overflow-hidden bg-white/10">
-          <div ref={progress} className="h-full w-full bg-[#9ef01a]" />
+          <div ref={progress} className="h-full w-full bg-accent" />
         </div>
-        <div className="mt-4 flex items-center justify-between gap-4 overflow-hidden font-mono text-[0.58rem] uppercase tracking-[0.16em] text-white/30 sm:text-[0.65rem] sm:tracking-[0.18em]">
+        <div className="mt-4 flex items-center justify-between gap-4 overflow-hidden font-mono text-[0.58rem] uppercase tracking-[0.16em] text-text-muted-on-dark sm:text-[0.65rem] sm:tracking-[0.18em]">
           <span className="shrink-0">Loading portfolio</span>
           <span className="shrink-0">Iloilo / PH</span>
         </div>

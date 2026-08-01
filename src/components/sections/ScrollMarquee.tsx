@@ -88,7 +88,7 @@ export const ScrollMarquee = () => {
     >
       <p className="sr-only">{marqueeItems.join(', ')}</p>
 
-      <div className="marquee-shell cursor-default select-none bg-black shadow-[0_0_40px_rgba(114,198,0,0.1)] transition-[box-shadow] duration-500 hover:shadow-[0_0_58px_rgba(158,240,26,0.34)]">
+      <div className="marquee-shell cursor-default select-none bg-canvas-dark shadow-[0_0_40px_rgba(109,40,217,0.12)] transition-[box-shadow] duration-500 hover:shadow-[0_0_58px_rgba(124,58,237,0.34)]">
         <div className="relative overflow-hidden border-b border-white/10 py-4 sm:py-5 lg:py-6">
           <div
             data-marquee-track
@@ -99,17 +99,17 @@ export const ScrollMarquee = () => {
               <MarqueeSet
                 key={copy}
                 marker="✦"
-                textClassName="font-display text-lg font-black uppercase tracking-[-0.035em] text-[#9ef01a] transition-[color,filter] duration-300 hover:text-white hover:drop-shadow-[0_0_12px_rgba(158,240,26,0.7)] sm:text-2xl lg:text-4xl"
-                markerClassName="text-[0.55rem] text-[#9ef01a]/30 sm:text-xs"
+                textClassName="font-display text-lg font-black uppercase tracking-[-0.035em] text-accent-soft transition-[color,filter] duration-300 hover:text-text-on-dark hover:drop-shadow-[0_0_12px_rgba(124,58,237,0.7)] sm:text-2xl lg:text-4xl"
+                markerClassName="text-[0.55rem] text-accent/35 sm:text-xs"
               />
             ))}
           </div>
 
-          <span className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-black to-transparent sm:w-24 lg:w-32" />
-          <span className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-black to-transparent sm:w-24 lg:w-32" />
+          <span className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-canvas-dark to-transparent sm:w-24 lg:w-32" />
+          <span className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-canvas-dark to-transparent sm:w-24 lg:w-32" />
         </div>
 
-        <div className="relative overflow-hidden bg-[#9ef01a] py-2.5 sm:py-3 lg:py-4">
+        <div className="relative overflow-hidden bg-accent py-2.5 sm:py-3 lg:py-4">
           <div
             data-marquee-track
             aria-hidden="true"
@@ -119,14 +119,14 @@ export const ScrollMarquee = () => {
               <MarqueeSet
                 key={copy}
                 marker="◆"
-                textClassName="font-display text-base font-black uppercase tracking-[-0.025em] text-black transition-[color,filter] duration-300 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.75)] sm:text-lg lg:text-2xl"
-                markerClassName="text-[0.5rem] text-black/25 sm:text-[0.65rem]"
+                textClassName="font-display text-base font-black uppercase tracking-[-0.025em] text-text-on-dark transition-[color,filter] duration-300 hover:text-text-on-dark hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.75)] sm:text-lg lg:text-2xl"
+                markerClassName="text-[0.5rem] text-text-on-dark/40 sm:text-[0.65rem]"
               />
             ))}
           </div>
 
-          <span className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#9ef01a] to-transparent sm:w-20 lg:w-24" />
-          <span className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#9ef01a] to-transparent sm:w-20 lg:w-24" />
+          <span className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-accent to-transparent sm:w-20 lg:w-24" />
+          <span className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-accent to-transparent sm:w-20 lg:w-24" />
         </div>
       </div>
     </section>

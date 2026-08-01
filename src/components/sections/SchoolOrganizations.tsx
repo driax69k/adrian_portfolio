@@ -55,15 +55,15 @@ export const SchoolOrganizations = () => {
     <section
       id="organizations"
       ref={root}
-      className="relative scroll-mt-20 overflow-hidden border-y border-black/10 bg-[#dff6b2] px-5 py-24 text-black sm:px-8 sm:py-32 lg:px-12"
+      className="relative scroll-mt-20 overflow-hidden border-y border-text-on-light/10 bg-accent-soft px-5 py-24 text-text-on-light sm:px-8 sm:py-32 lg:px-12"
       aria-labelledby="organizations-title"
     >
       <div
-        className="pointer-events-none absolute -right-40 top-1/2 size-[34rem] -translate-y-1/2 rounded-full border border-black/[0.055]"
+        className="pointer-events-none absolute -right-40 top-1/2 size-[34rem] -translate-y-1/2 rounded-full border border-text-on-light/[0.055]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -right-24 top-1/2 size-[24rem] -translate-y-1/2 rounded-full border border-black/[0.055]"
+        className="pointer-events-none absolute -right-24 top-1/2 size-[24rem] -translate-y-1/2 rounded-full border border-text-on-light/[0.055]"
         aria-hidden="true"
       />
 
@@ -75,11 +75,11 @@ export const SchoolOrganizations = () => {
             description="The organizations, leadership roles, and collaborative spaces that support my growth beyond the classroom."
           />
 
-          <div className="mt-8 border border-black/15 bg-white/25 p-5">
-            <p className="font-mono text-[0.65rem] font-black uppercase tracking-[0.17em] text-black">
+          <div className="mt-8 border border-text-on-light/15 bg-white/25 p-5">
+            <p className="font-mono text-[0.65rem] font-black uppercase tracking-[0.17em] text-text-on-light">
               Community involvement
             </p>
-            <p className="mt-3 text-sm leading-6 text-black/55">
+            <p className="mt-3 text-sm leading-6 text-text-muted-on-light">
               Learning to contribute, communicate, and grow alongside students
               who share the same drive to build and help others.
             </p>
@@ -89,7 +89,7 @@ export const SchoolOrganizations = () => {
         {schoolOrganizations.length > 0 ? (
           <div className="organization-list relative">
             <div
-              className="organization-line absolute bottom-5 left-[1.12rem] top-5 w-px bg-black/35 sm:left-[1.45rem]"
+              className="organization-line absolute bottom-5 left-[1.12rem] top-5 w-px bg-text-on-light/35 sm:left-[1.45rem]"
               aria-hidden="true"
             />
 
@@ -99,7 +99,7 @@ export const SchoolOrganizations = () => {
                   key={organization.id}
                   className="organization-item relative pl-14 sm:pl-20"
                 >
-                  <div className="absolute left-0 top-6 z-10 grid size-9 place-items-center overflow-hidden border border-black/20 bg-white shadow-[0_0_0_6px_#dff6b2] sm:size-12">
+                  <div className="absolute left-0 top-6 z-10 grid size-9 place-items-center overflow-hidden border border-text-on-light/20 bg-white shadow-[0_0_0_6px_var(--color-accent-soft)] sm:size-12">
                     {organization.logo ? (
                       <img
                         src={organization.logo}
@@ -111,41 +111,41 @@ export const SchoolOrganizations = () => {
                         className="size-full object-contain"
                       />
                     ) : (
-                      <Building2 className="size-4 text-black sm:size-5" aria-hidden="true" />
+                      <Building2 className="size-4 text-text-on-light sm:size-5" aria-hidden="true" />
                     )}
                   </div>
 
-                  <article className="border border-black/15 bg-white/30 p-5 transition duration-300 hover:border-black/35 hover:bg-white/55 sm:p-7">
+                  <article className="border border-text-on-light/15 bg-white/30 p-5 transition duration-300 hover:border-accent/40 hover:bg-white/55 sm:p-7">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                       <div>
                         <Badge>School Organization</Badge>
-                        <h3 className="mt-4 font-display text-2xl font-black uppercase leading-none tracking-[-0.03em] text-black sm:text-3xl">
+                        <h3 className="mt-4 font-display text-2xl font-black uppercase leading-none tracking-[-0.03em] text-text-on-light sm:text-3xl">
                           {organization.name}
                         </h3>
                         {organization.role ? (
-                          <p className="mt-2 font-mono text-[0.64rem] font-black uppercase tracking-[0.12em] text-black/55">
+                          <p className="mt-2 font-mono text-[0.64rem] font-black uppercase tracking-[0.12em] text-text-muted-on-light">
                             {organization.role}
                           </p>
                         ) : null}
                       </div>
 
                       {organization.period ? (
-                        <span className="shrink-0 font-mono text-xs capitalize text-black/40">
+                        <span className="shrink-0 font-mono text-xs capitalize text-text-muted-on-light">
                           {organization.period}
                         </span>
                       ) : null}
                     </div>
 
                     {organization.description ? (
-                      <p className="mt-5 max-w-2xl text-sm leading-7 text-black/55 sm:text-base">
+                      <p className="mt-5 max-w-2xl text-sm leading-7 text-text-muted-on-light sm:text-base">
                         {organization.description}
                       </p>
                     ) : null}
 
                     {organization.location || organization.activities?.length ? (
-                      <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-black/10 pt-5">
+                      <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-text-on-light/10 pt-5">
                         {organization.location ? (
-                          <span className="mr-2 inline-flex items-center gap-1.5 text-xs text-black/45">
+                          <span className="mr-2 inline-flex items-center gap-1.5 text-xs text-text-muted-on-light">
                             <MapPin className="size-3.5" aria-hidden="true" />
                             {organization.location}
                           </span>
@@ -154,7 +154,7 @@ export const SchoolOrganizations = () => {
                         {organization.activities?.map((activity) => (
                           <span
                             key={activity}
-                            className="border border-black/10 px-2.5 py-1 font-mono text-[0.6rem] uppercase tracking-wide text-black/45"
+                            className="border border-text-on-light/10 px-2.5 py-1 font-mono text-[0.6rem] uppercase tracking-wide text-text-muted-on-light"
                           >
                             {activity}
                           </span>
@@ -167,15 +167,15 @@ export const SchoolOrganizations = () => {
             </ol>
           </div>
         ) : (
-          <div className="grid min-h-80 place-items-center border border-dashed border-black/25 bg-white/25 p-8 text-center">
+          <div className="grid min-h-80 place-items-center border border-dashed border-text-on-light/25 bg-white/25 p-8 text-center">
             <div className="flex max-w-sm flex-col items-center">
-              <span className="grid size-14 place-items-center rounded-full border border-black/15 bg-white/45">
+              <span className="grid size-14 place-items-center rounded-full border border-text-on-light/15 bg-white/45">
                 <UsersRound className="size-5" aria-hidden="true" />
               </span>
               <p className="mt-6 font-display text-2xl font-black uppercase tracking-[-0.04em]">
                 Organization details coming soon
               </p>
-              <p className="mt-3 text-sm leading-6 text-black/50">
+              <p className="mt-3 text-sm leading-6 text-text-muted-on-light">
                 Official school organization names and roles will be added
                 here.
               </p>

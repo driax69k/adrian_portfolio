@@ -165,19 +165,19 @@ export const Hero = () => {
     <section
       id="home"
       ref={root}
-      className="relative flex min-h-[100svh] scroll-mt-20 items-center overflow-hidden bg-[#f4f4eb] px-5 pb-20 pt-28 text-black sm:px-8 sm:pt-32 lg:px-12"
+      className="relative flex min-h-[100svh] scroll-mt-20 items-center overflow-hidden bg-canvas-light px-5 pb-20 pt-28 text-text-on-light sm:px-8 sm:pt-32 lg:px-12"
       aria-labelledby="hero-heading"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.045)_1px,transparent_1px)] bg-[size:48px_48px]" />
-      <div className="absolute left-1/2 top-1/2 size-[min(80vw,58rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-black/[0.045]" />
-      <div className="absolute left-1/2 top-1/2 size-[min(63vw,45rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-black/[0.05]" />
-      <div className="absolute left-1/2 top-[48%] size-[min(68vw,48rem)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#b7f34b]/25 blur-[80px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(18,11,36,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(18,11,36,0.05)_1px,transparent_1px)] bg-[size:48px_48px]" />
+      <div className="absolute left-1/2 top-1/2 size-[min(80vw,58rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-text-on-light/[0.045]" />
+      <div className="absolute left-1/2 top-1/2 size-[min(63vw,45rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-text-on-light/[0.05]" />
+      <div className="absolute left-1/2 top-[48%] size-[min(68vw,48rem)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-[80px]" />
 
       <div ref={stage} className="relative mx-auto w-full max-w-[94rem]">
         {orbitIcons.map(({ Icon, className }, index) => (
           <div
             key={index}
-            className={`orbit-icon absolute z-10 hidden size-12 place-items-center rounded-full border border-black/10 bg-[#f7f7ef]/85 text-black shadow-[0_10px_28px_rgba(0,0,0,0.07)] backdrop-blur sm:grid ${className}`}
+            className={`orbit-icon absolute z-10 hidden size-12 place-items-center rounded-full border border-text-on-light/10 bg-canvas-light/85 text-text-on-light shadow-[0_10px_28px_rgba(18,11,36,0.09)] backdrop-blur sm:grid ${className}`}
             aria-hidden="true"
           >
             <Icon className="size-4" />
@@ -185,12 +185,12 @@ export const Hero = () => {
         ))}
 
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
-          <div className="hero-meta hero-reveal mb-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono text-[0.62rem] font-bold uppercase tracking-[0.15em] text-black/55 sm:text-[0.68rem]">
+          <div className="hero-meta hero-reveal mb-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono text-[0.62rem] font-bold uppercase tracking-[0.15em] text-text-muted-on-light sm:text-[0.68rem]">
             <span className="inline-flex items-center gap-2">
               <MapPin className="size-3.5" />
               Based in Iloilo City, Philippines
             </span>
-            <span className="hidden h-5 w-px bg-black/20 sm:block" />
+            <span className="hidden h-5 w-px bg-text-on-light/20 sm:block" />
             <span>Open to internships &amp; projects</span>
           </div>
 
@@ -208,17 +208,17 @@ export const Hero = () => {
 
           <div className="hero-statement mt-5 flex max-w-4xl flex-wrap items-center justify-center gap-x-[0.22em] gap-y-2 font-display text-[clamp(1.35rem,3vw,2.35rem)] font-bold leading-[1.12] tracking-[-0.05em]">
             <span>Designing</span>
-            <span className="inline-block rounded-[0.22em] bg-[#d9f2a1]/75 px-[0.22em] py-[0.08em]">
+            <span className="inline-block rounded-[0.22em] bg-accent-soft/75 px-[0.22em] py-[0.08em]">
               Ideas
             </span>
             <span>Building useful</span>
-            <span className="inline-block rounded-[0.22em] bg-[#d9f2a1]/75 px-[0.22em] py-[0.08em] text-[#72c600]">
+            <span className="inline-block rounded-[0.22em] bg-accent-soft/75 px-[0.22em] py-[0.08em] text-accent-hover">
               Solutions
             </span>
           </div>
 
-          <div className="hero-copy mt-5 flex items-center gap-2 font-mono text-[0.67rem] font-bold uppercase tracking-[0.14em] text-black/55">
-            <span className="text-black" aria-hidden="true">
+          <div className="hero-copy mt-5 flex items-center gap-2 font-mono text-[0.67rem] font-bold uppercase tracking-[0.14em] text-text-muted-on-light">
+            <span className="text-text-on-light" aria-hidden="true">
               {'{'}
             </span>
 
@@ -228,12 +228,12 @@ export const Hero = () => {
                 {heroRoles[0]}
               </span>
             </span>
-            <span className="text-black" aria-hidden="true">
+            <span className="text-text-on-light" aria-hidden="true">
               {'}'}
             </span>
           </div>
 
-          <p className="hero-copy mt-5 max-w-2xl text-pretty text-base leading-7 text-black/60 sm:text-lg sm:leading-8">
+          <p className="hero-copy mt-5 max-w-2xl text-pretty text-base leading-7 text-text-muted-on-light sm:text-lg sm:leading-8">
             {personalInfo.shortBio}
           </p>
 
@@ -257,7 +257,7 @@ export const Hero = () => {
                   href={social.url}
                   target={social.url.startsWith('http') ? '_blank' : undefined}
                   rel={social.url.startsWith('http') ? 'noreferrer' : undefined}
-                  className="grid size-9 place-items-center rounded-full border border-black/15 text-black/55 transition hover:-translate-y-1 hover:border-black hover:bg-black hover:text-[#9ef01a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ef01a]"
+                  className="grid size-9 place-items-center rounded-full border border-text-on-light/15 text-text-muted-on-light transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-text-on-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                   aria-label={social.name}
                 >
                   <SocialIcon name={social.icon} className="size-3.5" />
@@ -267,7 +267,7 @@ export const Hero = () => {
               href={emailComposeUrl}
               target="_blank"
               rel="noreferrer"
-              className="ml-2 hidden items-center gap-2 font-mono text-[0.62rem] font-bold uppercase tracking-[0.13em] text-black/50 hover:text-black sm:inline-flex"
+              className="ml-2 hidden items-center gap-2 font-mono text-[0.62rem] font-bold uppercase tracking-[0.13em] text-text-muted-on-light hover:text-accent-hover sm:inline-flex"
             >
               <Mail className="size-3.5" />
               Say hello
@@ -278,7 +278,7 @@ export const Hero = () => {
 
       <a
         href="#about"
-        className="hero-copy absolute bottom-5 right-5 z-20 grid size-14 place-items-center rounded-full bg-black text-[#9ef01a] shadow-[0_12px_30px_rgba(0,0,0,0.2)] transition hover:scale-105 sm:bottom-7 sm:right-7"
+        className="hero-copy absolute bottom-5 right-5 z-20 grid size-14 place-items-center rounded-full bg-canvas-dark text-accent shadow-[0_12px_30px_rgba(18,11,36,0.24)] transition hover:scale-105 sm:bottom-7 sm:right-7"
         aria-label="Scroll to about section"
       >
         <ArrowDown className="size-5" />

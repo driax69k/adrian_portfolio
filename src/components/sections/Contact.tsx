@@ -180,11 +180,11 @@ export const Contact = () => {
     <section
       id="contact"
       ref={root}
-      className="relative scroll-mt-20 overflow-hidden border-y border-white/10 bg-[#080808] px-5 py-24 text-white sm:px-8 sm:py-32 lg:px-12"
+      className="relative scroll-mt-20 overflow-hidden border-y border-white/10 bg-canvas-dark px-5 py-24 text-text-on-dark sm:px-8 sm:py-32 lg:px-12"
       aria-labelledby="contact-title"
     >
-      <div className="absolute -left-40 top-20 size-[30rem] rounded-full bg-[#9ef01a]/[0.055] blur-[110px]" />
-      <div className="absolute -right-40 bottom-0 size-[30rem] rounded-full bg-[#9ef01a]/[0.035] blur-[110px]" />
+      <div className="absolute -left-40 top-20 size-[30rem] rounded-full bg-accent/[0.065] blur-[110px]" />
+      <div className="absolute -right-40 bottom-0 size-[30rem] rounded-full bg-accent/[0.045] blur-[110px]" />
 
       <div className="relative mx-auto max-w-[90rem]">
         <SectionHeading
@@ -197,13 +197,13 @@ export const Contact = () => {
 
         <div className="contact-grid mt-14 grid gap-5 lg:mt-20 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="contact-panel flex flex-col border border-white/15 bg-white/[0.015] p-6 sm:p-8">
-            <div className="grid size-12 place-items-center bg-[#9ef01a]">
-              <MessageSquareText className="size-5 text-black" />
+            <div className="grid size-12 place-items-center bg-accent">
+              <MessageSquareText className="size-5 text-text-on-dark" />
             </div>
-            <h3 className="font-display mt-7 text-3xl font-black uppercase tracking-[-0.04em] text-white sm:text-4xl">
+            <h3 className="font-display mt-7 text-3xl font-black uppercase tracking-[-0.04em] text-text-on-dark sm:text-4xl">
               Start a conversation.
             </h3>
-            <p className="mt-4 max-w-md text-sm leading-7 text-white/45">
+            <p className="mt-4 max-w-md text-sm leading-7 text-text-muted-on-dark">
               Tell me what you’re working on, what problem you’re trying to
               solve, or where you think I could contribute.
             </p>
@@ -213,25 +213,25 @@ export const Contact = () => {
                 href={emailComposeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-4 border border-white/10 bg-white/[0.02] p-4 transition hover:border-[#9ef01a]/50"
+                className="group flex items-center gap-4 border border-white/10 bg-white/[0.02] p-4 transition hover:border-accent/50"
               >
                 <span className="grid size-10 place-items-center border border-white/10 bg-white/[0.03]">
-                  <Mail className="size-4 text-[#9ef01a]" />
+                  <Mail className="size-4 text-accent" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-mono text-[0.58rem] uppercase tracking-wider text-white/30">Email</span>
-                  <span className="mt-1 block truncate text-sm font-medium text-white/70 group-hover:text-white">
+                  <span className="block font-mono text-[0.58rem] uppercase tracking-wider text-text-muted-on-dark">Email</span>
+                  <span className="mt-1 block truncate text-sm font-medium text-text-muted-on-dark group-hover:text-text-on-dark">
                     {personalInfo.email}
                   </span>
                 </span>
               </a>
               <div className="flex items-center gap-4 border border-white/10 bg-white/[0.02] p-4">
                 <span className="grid size-10 place-items-center border border-white/10 bg-white/[0.03]">
-                  <MapPin className="size-4 text-[#9ef01a]" />
+                  <MapPin className="size-4 text-accent" />
                 </span>
                 <span>
-                  <span className="block font-mono text-[0.58rem] uppercase tracking-wider text-white/30">Location</span>
-                  <span className="mt-1 block text-sm font-medium text-white/70">
+                  <span className="block font-mono text-[0.58rem] uppercase tracking-wider text-text-muted-on-dark">Location</span>
+                  <span className="mt-1 block text-sm font-medium text-text-muted-on-dark">
                     {personalInfo.location}
                   </span>
                 </span>
@@ -239,7 +239,7 @@ export const Contact = () => {
             </div>
 
             <div className="mt-auto pt-10">
-              <p className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/30">
+              <p className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.18em] text-text-muted-on-dark">
                 Elsewhere online
               </p>
               <div className="mt-4 flex gap-3">
@@ -249,7 +249,7 @@ export const Contact = () => {
                     href={social.url}
                     target={social.url.startsWith('http') ? '_blank' : undefined}
                     rel={social.url.startsWith('http') ? 'noreferrer' : undefined}
-                    className="grid size-11 place-items-center rounded-full border border-white/15 text-white/45 transition hover:-translate-y-1 hover:border-[#9ef01a] hover:text-[#9ef01a]"
+                    className="grid size-11 place-items-center rounded-full border border-white/15 text-text-muted-on-dark transition hover:-translate-y-1 hover:border-accent hover:text-accent"
                     aria-label={social.name}
                   >
                     <SocialIcon name={social.icon} className="size-4" />
@@ -323,7 +323,7 @@ export const Contact = () => {
             />
 
             <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs leading-5 text-white/25">
+              <p className="text-xs leading-5 text-text-muted-on-dark">
                 Your message is sent securely to my business email. I&apos;ll
                 reply to the address you provide.
               </p>
@@ -338,7 +338,7 @@ export const Contact = () => {
                     <Send className="relative z-10 size-4" />
                   )
                 }
-                className="shrink-0 !border-[#9ef01a] !bg-[#9ef01a] !text-black hover:!border-white hover:!bg-white"
+                className="shrink-0 !border-accent !bg-accent !text-text-on-dark hover:!border-white hover:!bg-white hover:!text-text-on-light"
               >
                 {submitState === 'submitting' ? 'Sending...' : 'Send message'}
               </Button>
