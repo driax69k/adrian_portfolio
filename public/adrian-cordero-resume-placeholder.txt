@@ -1,0 +1,11 @@
+ADRIAN CORDERO
+IT Student & Aspiring Full-Stack Developer
+Iloilo City, Philippines
+
+This is a placeholder resume file.
+
+Replace this file with your PDF resume and update resumeUrl in:
+src/data/personal.ts
+
+Suggested filename:
+adrian-cordero-resume.pdf

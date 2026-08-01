@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Adrian Cordero profile placeholder</title>
+  <desc id="desc">Abstract dark portrait placeholder with Adrian Cordero's initials</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="720" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101e31"/>
+      <stop offset=".58" stop-color="#08111f"/>
+      <stop offset="1" stop-color="#050a14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(570 310) rotate(130) scale(420 380)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9ef01a" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#9ef01a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="person" x1="280" y1="230" x2="540" y2="880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#253651"/>
+      <stop offset="1" stop-color="#101b2b"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#94a3b8" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <circle cx="400" cy="360" r="132" fill="url(#person)"/>
+  <path d="M155 898c19-214 113-342 245-342s226 128 245 342H155Z" fill="url(#person)"/>
+  <circle cx="400" cy="360" r="166" fill="none" stroke="#9ef01a" stroke-opacity=".12"/>
+  <path d="M116 205h118M116 205v118M684 795H566M684 795V677" fill="none" stroke="#9ef01a" stroke-opacity=".45" stroke-width="2"/>
+  <g transform="translate(66 790)">
+    <rect width="158" height="76" rx="20" fill="#07101c" fill-opacity=".85" stroke="#9ef01a" stroke-opacity=".2"/>
+    <text x="79" y="49" fill="#d9ff5b" font-family="monospace" font-size="28" font-weight="700" text-anchor="middle">AC</text>
+  </g>
+</svg>

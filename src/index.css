@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", "Inter", "Aptos", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", "SFMono-Regular", "Cascadia Code", monospace;
+  --font-display: "Space Grotesk Variable", "Space Grotesk", "Aptos Display", "Segoe UI", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  font-family: var(--font-sans);
+  font-synthesis: weight;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background: #f4f4eb;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  background: #f4f4eb;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  content: "";
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+}
+
+::selection {
+  color: #050505;
+  background: #9ef01a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4eb;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid #f4f4eb;
+  border-radius: 999px;
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ef01a;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.12vw, 2px) #080808;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (pointer: coarse) {
+  .will-change-transform {
+    will-change: auto;
+  }
+}
